@@ -4,9 +4,8 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install ember-cli-jquery-ui`
+* `ember g ember-cli-jquery-ui`
 
 ## Running
 
