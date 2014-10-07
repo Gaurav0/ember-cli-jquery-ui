@@ -10,11 +10,11 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "https://github.com/stefanpenner/ember-cli",
+  "repository": "https://github.com/gaurav0/ember-cli-jquery-ui",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Gaurav Munjal",
   "license": "MIT",
   "devDependencies": {
     "body-parser": "^1.2.0",
@@ -30,7 +30,8 @@
     "glob": "^4.0.5"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "jquery-ui"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
