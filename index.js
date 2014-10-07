@@ -1,6 +1,10 @@
 module.exports = {
   name: 'ember-cli-jquery-ui',
 
+  blueprintsPath: function() {
+    return path.join(__dirname, 'blueprints');
+  },
+
   included: function(app) {
     this._super.included(app);
 
