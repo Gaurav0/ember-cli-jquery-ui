@@ -1,6 +1,9 @@
 module.exports = {
     normalizeEntityName: function() {},
     afterInstall: function() {
-        return this.addBowerPackageToProject('jquery-ui');
+        var _this = this;
+        return this.addBowerPackageToProject('brocolli-static-compiler').then(function () {
+            return _this.addBowerPackageToProject('jquery-ui');
+        });
     }
 };

@@ -10,7 +10,15 @@ module.exports = {
   included: function(app) {
     this._super.included(app);
 
-    app.import('bower_components/jquery-ui/jquery-ui.js');
-    app.import('bower_components/jquery-ui/themes/base/all.css')
+    app.import(path.join(app.bowerDirectory, 'jquery-ui', 'jquery-ui.js'));
+    app.import(path.join(app.bowerDirectory, 'jquery-ui', 'themes', 'base', 'all.css'));
+  },
+
+  treeForPublic: function(tree) {
+    return this.pickFiles(path.join(app.bowerDirectory, 'jquery-ui', 'themes', 'base', 'images'), {
+      srcDir: '/',
+      files: '**/*.*',
+      destDir: '/images'
+    });
   }
 };
