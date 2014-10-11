@@ -18,6 +18,5 @@ var app = new EmberAddon();
 // along with the exports of each module as its value.
 
 app.import('bower_components/jquery-ui/jquery-ui.js');
-app.import('bower_components/jquery-ui/themes/base/all.css')
 
 module.exports = app.toTree();
