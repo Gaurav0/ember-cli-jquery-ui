@@ -4,7 +4,7 @@ A simple addon to add jquery-ui as a dependency to your app.
 
 ## Installation
 
-* `npm install ember-cli-jquery-ui`
+* `npm install --save-dev ember-cli-jquery-ui`
 * `ember g ember-cli-jquery-ui`
 
 ## Running
