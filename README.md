@@ -55,7 +55,7 @@ http://github.com/gaurav0/ember-cli-jquery-ui-example
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes a two example components:
+At the moment, ember-cli-jquery-ui includes a three example components:
 
 1. `jqui-button`, which can be used in your application like this:
 
@@ -64,6 +64,10 @@ At the moment, ember-cli-jquery-ui includes a two example components:
 2. `jqui-datepicker`, which can be used in your application like this:
 
    `{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}`
+
+3. `jqui-progress-bar`, which can be used in your application like this:
+
+   `{{jqui-progress-bar value=37 max=100}}`
 
 I would appreciate contributions of additional components wrapping jquery-ui widgets.
 
