@@ -13,7 +13,7 @@ var OPTIONS = ["altField", "altFormat", "appendText", "autoSize",
     "showOtherMonths", "showWeek", "stepMonths", "weekHeader", "yearRange",
     "yearSuffix"];
 
-var EVENTS = ['onClose', 'onSelect'];
+var EVENTS = ['onChangeMonthYear', 'onClose', 'onSelect'];
 
 function sendAction(context, actionName) {
     return function() {
@@ -45,7 +45,8 @@ var DatePickerComponent = Ember.TextField.extend({
         onSelect: function() {
             this.set('value', this.$().val());
         },
-        onClose: Ember.K
+        onClose: Ember.K,
+        onChangeMonthYear: Ember.K
     },
 
     destroyDatepicker: function() {
