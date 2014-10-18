@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-jquery-ui",
-  "description": "A simple addon to add jquery-ui as a dependency to your app. Also includes a small library of components wrapping JQuery UI widgets."
+  "description": "A simple addon to add jquery-ui as a dependency to your app. Also includes a small library of components wrapping JQuery UI widgets.",
   "version": "0.0.9",
   "directories": {
     "doc": "doc",
