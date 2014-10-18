@@ -14,11 +14,11 @@ you may do so by editing your Brocfile.js like this:
 
 `var EmberApp = require('ember-cli/lib/broccoli/ember-app');`
 
- `var app = new EmberApp({`
-     `'ember-cli-jquery-ui': {`
-         `'theme': 'ui-darkness'`
-     `}`
- `});`
+    var app = new EmberApp({
+        'ember-cli-jquery-ui': {
+            'theme': 'ui-darkness'
+        }
+    });
  
 The list of available standard themes (with JQuery UI 1.11.1):
 
