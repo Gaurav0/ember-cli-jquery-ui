@@ -1,6 +1,6 @@
 # Ember-cli-jquery-ui
 
-A simple addon to add jquery-ui as a dependency to your app.
+A simple addon to add jquery-ui as a dependency to your app. Also includes a small library of components wrapping JQuery UI widgets.
 
 ## Installation
 
