@@ -12,7 +12,7 @@ A simple addon to add jquery-ui as a dependency to your app. Also includes a sma
 By default, your application will run with the base theme. If you would like to select another jquery-ui standard theme,
 you may do so by editing your Brocfile.js like this:
 
-`var EmberApp = require('ember-cli/lib/broccoli/ember-app');`
+    var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
     var app = new EmberApp({
         'ember-cli-jquery-ui': {
