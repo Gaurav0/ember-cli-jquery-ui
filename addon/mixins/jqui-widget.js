@@ -59,7 +59,7 @@ export default Ember.Mixin.create({
             // the jQuery UI widget.
             var observer = function() {
                 var value = this.get(key);
-                this.get('ui')._setOption(key, value);
+                this.get('ui').option(key, value);
             };
             this.addObserver(key, observer);
 
