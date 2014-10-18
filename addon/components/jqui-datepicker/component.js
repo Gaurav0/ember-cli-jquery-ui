@@ -19,7 +19,7 @@ function sendAction(context, actionName) {
     return function() {
         var args = [].slice.call(arguments);
         context.send.apply(context, [actionName].concat(args));
-    }
+    };
 }
 
 var DatePickerComponent = Ember.TextField.extend({

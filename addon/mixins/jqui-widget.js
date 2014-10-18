@@ -16,7 +16,7 @@ export default Ember.Mixin.create({
 
         // Create a new instance of the jQuery UI widget based on its `uiType`
         // and the current element.
-        var ui = jQuery.ui[this.get('uiType')](options, this.get('element'));
+        var ui = Ember.$.ui[this.get('uiType')](options, this.get('element'));
 
         // Save off the instance of the jQuery UI widget as the `ui` property
         // on this Ember view.
@@ -39,7 +39,7 @@ export default Ember.Mixin.create({
             }
             ui._destroy();
         }
-    }.on('willDestroyElement')
+    }.on('willDestroyElement'),
 
     // Each jQuery UI widget has a series of options that can be configured.
     // For instance, to disable a button, you call
@@ -78,7 +78,6 @@ export default Ember.Mixin.create({
     // UI widget triggered the event.
     _gatherEvents: function(options) {
         var uiEvents = this.get('uiEvents') || [], self = this;
-        console.log(uiEvents);
         uiEvents.forEach(function(event) {
             var callback = self[event];
             if (callback) {
