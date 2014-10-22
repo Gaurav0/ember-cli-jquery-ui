@@ -55,7 +55,7 @@ http://github.com/gaurav0/ember-cli-jquery-ui-example
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes a three example components:
+At the moment, ember-cli-jquery-ui includes a four example components:
 
 1. `jqui-button`, which can be used in your application like this:
 
@@ -68,6 +68,10 @@ At the moment, ember-cli-jquery-ui includes a three example components:
 3. `jqui-progress-bar`, which can be used in your application like this:
 
    `{{jqui-progress-bar value=37 max=100}}`
+
+4. `jqui-spinner`, which can be used in your application like this:
+
+   `{{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}`
 
 I would appreciate contributions of additional components wrapping jquery-ui widgets.
 
