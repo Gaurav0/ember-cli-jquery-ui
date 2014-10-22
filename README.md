@@ -55,7 +55,7 @@ http://github.com/gaurav0/ember-cli-jquery-ui-example
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes a four example components:
+At the moment, ember-cli-jquery-ui includes four example components:
 
 1. `jqui-button`, which can be used in your application like this:
 
