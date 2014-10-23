@@ -78,20 +78,19 @@ export default Ember.Mixin.create({
     // UI widget triggered the event.
     _gatherEvents: function(options) {
         var uiEvents = this.get('uiEvents') || [], self = this;
-        uiEvents.forEach(function(event) {
-            var callback = self[event];
+        uiEvents.forEach(function(eventName) {
+            var callback = self[eventName];
 
-                // You can register a handler for a jQuery UI event by passing
-                // it in along with the creation options. Update the options hash
-                // to include any event callbacks.
-                options[event] = function(event, ui) {
-                    if (callback) {
-                        callback.call(self, event, ui);
-                    }
+            // You can register a handler for a jQuery UI event by passing
+            // it in along with the creation options. Update the options hash
+            // to include any event callbacks.
+            options[eventName] = function(event, ui) {
+                if (callback) {
+                    callback.call(self, event, ui);
+                }
 
-                    self.sendAction(event, ui);
-                };
-            }
+                self.sendAction(eventName + "Action", event, ui);
+            };
         });
     }
 });
