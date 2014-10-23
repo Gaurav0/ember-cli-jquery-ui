@@ -1,27 +1,24 @@
 import Ember from 'ember';
+import jquiWidget from 'ember-cli-jquery-ui/mixins/jqui-widget';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(jquiWidget, {
+    uiType: 'button',
+    uiOptions: ['disabled'],
+    uiEvents: [],
     tagName: 'button',
     disabled: false,
     icon: "",
 
     didInsertElement: function() {
         var _this = this;
-        Ember.run.schedule('afterRender', function() {
-            _this.$().button({
-                disabled: _this.get('disabled'),
-                icons: {
-                    primary: _this.get('icon')
-                }
+        Ember.run.next(function() {
+            _this.$().button("option", "icons", {
+                primary: _this.get('icon')
             });
         });
     },
 
     click: function() {
         this.sendAction();
-    },
-
-    disabledDidChange: function() {
-        this.$().button("option", "disabled", this.get('disabled'));
-    }.observes('disabled')
+    }
 });
