@@ -5,8 +5,10 @@ export default Ember.Component.extend(jquiWidget, {
     uiType: 'slider',
     uiOptions: ['animate', 'disabled', 'max', 'min', 'orientation', 'range', 'step', 'value', 'values'  ],
     uiEvents: ['change', 'create', 'slide', 'start', 'stop'],
-    slide: function(event, ui) {
-        this.set('value', ui.value);
-        this.set('values', ui.values);
+    uiActions: {
+        slide: function(event, ui) {
+            this.set('value', ui.value);
+            this.set('values', ui.values);
+        }
     }
 });

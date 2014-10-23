@@ -79,7 +79,7 @@ export default Ember.Mixin.create({
     _gatherEvents: function(options) {
         var uiEvents = this.get('uiEvents') || [], self = this;
         uiEvents.forEach(function(eventName) {
-            var callback = self[eventName];
+            var callback = self.uiActions && self.uiActions[eventName];
 
             // You can register a handler for a jQuery UI event by passing
             // it in along with the creation options. Update the options hash
@@ -89,7 +89,7 @@ export default Ember.Mixin.create({
                     callback.call(self, event, ui);
                 }
 
-                self.sendAction(eventName + "Action", event, ui);
+                self.sendAction(eventName, event, ui);
             };
         });
     }
