@@ -80,12 +80,17 @@ export default Ember.Mixin.create({
         var uiEvents = this.get('uiEvents') || [], self = this;
         uiEvents.forEach(function(event) {
             var callback = self[event];
-            if (callback) {
 
                 // You can register a handler for a jQuery UI event by passing
                 // it in along with the creation options. Update the options hash
                 // to include any event callbacks.
-                options[event] = function(event, ui) { callback.call(self, event, ui); };
+                options[event] = function(event, ui) {
+                    if (callback) {
+                        callback.call(self, event, ui);
+                    }
+
+                    self.sendAction(event, ui);
+                };
             }
         });
     }
