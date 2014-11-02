@@ -55,7 +55,7 @@ export default Ember.Mixin.create({
             options[key] = this.get(key);
 
             // Set up an observer on the Ember property. When it changes,
-            // call jQuery UI's `setOption` method to reflect the property onto
+            // call jQuery UI's `option` method to reflect the property onto
             // the jQuery UI widget.
             var observer = function() {
                 var value = this.get(key);
