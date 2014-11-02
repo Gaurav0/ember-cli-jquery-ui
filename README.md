@@ -55,27 +55,31 @@ http://github.com/gaurav0/ember-cli-jquery-ui-example
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes five example components:
+At the moment, ember-cli-jquery-ui includes six example components:
 
-1. `jqui-button`, which can be used in your application like this:
+1. `jqui-autocomplete`, which can be used in your application like this:
+
+   `{{jqui-autocomplete value=text source=languages}} {{text}}`
+
+2. `jqui-button`, which can be used in your application like this:
 
    `{{#jqui-button icon="ui-icon-gear" action="buttonClicked" disabled=disabledProperty}}Button Text{{/jqui-button}}`
 
-2. `jqui-datepicker`, which can be used in your application like this:
+3. `jqui-datepicker`, which can be used in your application like this:
 
    `{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}`
 
-3. `jqui-progress-bar`, which can be used in your application like this:
+4. `jqui-progress-bar`, which can be used in your application like this:
 
    `{{jqui-progress-bar value=37 max=100}}`
-
-4. `jqui-spinner`, which can be used in your application like this:
-
-   `{{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}`
 
 5. `jqui-slider`, which can be used in your application like this:
 
     `{{jqui-slider value=num min=0 max=100 step=10 slide="slideAction"}} {{num}}`
+
+6. `jqui-spinner`, which can be used in your application like this:
+
+   `{{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}`
 
 I would appreciate contributions of additional components wrapping jquery-ui widgets.
 
