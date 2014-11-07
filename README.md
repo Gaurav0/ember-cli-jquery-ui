@@ -58,31 +58,49 @@ The list of available standard themes (with JQuery UI 1.11.1):
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes six example components:
+At the moment, ember-cli-jquery-ui includes seven example components:
 
-1. `jqui-autocomplete`, which can be used in your application like this:
+1. `jqui-accordion`, which can be used in your application like this:
 
-   `{{jqui-autocomplete value=text source=languages}} {{text}}`
+        {{#jqui-accordion}}
+        &lt;h3&gt;Section 1&lt;/h3&gt;
+        &lt;div&gt;
+            &lt;p&gt;
+                Mauris mauris ante, ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;h3&gt;Section 2&lt;/h3&gt;
+        &lt;div&gt;
+            &lt;p&gt;
+                Sed non urna. ...
+            &lt;/p&gt;
+        &lt;/div&gt;
+        ...
+        {{/jqui-accordion}}
 
-2. `jqui-button`, which can be used in your application like this:
+2. `jqui-autocomplete`, which can be used in your application like this:
 
-   `{{#jqui-button icon="ui-icon-gear" action="buttonClicked" disabled=disabledProperty}}Button Text{{/jqui-button}}`
+        {{jqui-autocomplete value=text source=languages}} {{text}}
 
-3. `jqui-datepicker`, which can be used in your application like this:
+3. `jqui-button`, which can be used in your application like this:
 
-   `{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}`
+        {{#jqui-button icon="ui-icon-gear" action="buttonClicked" disabled=disabledProperty}}Button Text{{/jqui-button}}
 
-4. `jqui-progress-bar`, which can be used in your application like this:
+4. `jqui-datepicker`, which can be used in your application like this:
 
-   `{{jqui-progress-bar value=37 max=100}}`
+        {{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}
 
-5. `jqui-slider`, which can be used in your application like this:
+5. `jqui-progress-bar`, which can be used in your application like this:
 
-    `{{jqui-slider value=num min=0 max=100 step=10 slide="slideAction"}} {{num}}`
+        {{jqui-progress-bar value=37 max=100}}
 
-6. `jqui-spinner`, which can be used in your application like this:
+6. `jqui-slider`, which can be used in your application like this:
 
-   `{{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}`
+        {{jqui-slider value=num min=0 max=100 step=10 slide="slideAction"}} {{num}}
+
+7. `jqui-spinner`, which can be used in your application like this:
+
+        {{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}
 
 I would appreciate contributions of additional components wrapping jquery-ui widgets.
 
