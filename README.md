@@ -63,18 +63,18 @@ At the moment, ember-cli-jquery-ui includes seven example components:
 1. `jqui-accordion`, which can be used in your application like this:
 
         {{#jqui-accordion}}
-        &lt;h3&gt;Section 1&lt;/h3&gt;
-        &lt;div&gt;
-            &lt;p&gt;
+        <h3>Section </h3>
+        <div>
+            <p>
                 Mauris mauris ante, ...
-            &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;h3&gt;Section 2&lt;/h3&gt;
-        &lt;div&gt;
-            &lt;p&gt;
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
                 Sed non urna. ...
-            &lt;/p&gt;
-        &lt;/div&gt;
+            </p>
+        </div>
         ...
         {{/jqui-accordion}}
 
