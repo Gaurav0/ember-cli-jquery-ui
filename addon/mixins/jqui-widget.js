@@ -8,19 +8,23 @@ export default Ember.Mixin.create({
     // method.
     setup: function() {
 
-        // Make jQuery UI options available as Ember properties
-        var options = this._gatherOptions();
+        Ember.run.scheduleOnce('afterRender', function() {
 
-        // Make sure that jQuery UI events trigger methods on this view.
-        this._gatherEvents(options);
+            // Make jQuery UI options available as Ember properties
+            var options = this._gatherOptions();
 
-        // Create a new instance of the jQuery UI widget based on its `uiType`
-        // and the current element.
-        var ui = Ember.$.ui[this.get('uiType')](options, this.get('element'));
+            // Make sure that jQuery UI events trigger methods on this view.
+            this._gatherEvents(options);
 
-        // Save off the instance of the jQuery UI widget as the `ui` property
-        // on this Ember view.
-        this.set('ui', ui);
+            // Create a new instance of the jQuery UI widget based on its `uiType`
+            // and the current element.
+            var ui = Ember.$.ui[this.get('uiType')](options, this.get('element'));
+
+            // Save off the instance of the jQuery UI widget as the `ui` property
+            // on this Ember view.
+            this.set('ui', ui);
+
+        }.bind(this));
     }.on('didInsertElement'),
 
     // When Ember tears down the view's DOM element, it will call
