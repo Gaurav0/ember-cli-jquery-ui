@@ -101,6 +101,26 @@ At the moment, ember-cli-jquery-ui includes seven example components:
 7. `jqui-spinner`, which can be used in your application like this:
 
         {{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}
+        
+8. `jqui-tabs`, which can be used in your application like this:
+
+        {{#jqui-tabs}}
+            <ul>
+                <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                <li><a href="#tabs-2">Proin dolor</a></li>
+                <li><a href="#tabs-3">Aenean lacinia</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>Proin elit arcu, ....</p>
+            </div>
+            <div id="tabs-2">
+                <p>Morbi tincidunt, ...</p>
+            </div>
+            <div id="tabs-3">
+                <p>Mauris eleifend ....</p>
+                <p>Duis cursus. ...</p>
+            </div>
+        {{/jqui-tabs}}
 
 I would appreciate contributions of additional components wrapping jquery-ui widgets.
 
