@@ -58,7 +58,7 @@ The list of available standard themes (with JQuery UI 1.11.1):
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes seven example components:
+At the moment, ember-cli-jquery-ui includes eight of the eleven jquery ui widgets wrapped in components:
 
 1. `jqui-accordion`, which can be used in your application like this:
 
