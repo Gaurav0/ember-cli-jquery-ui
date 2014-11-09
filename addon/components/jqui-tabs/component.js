@@ -9,7 +9,8 @@ export default Ember.Component.extend(jquiWidget, {
     uiActions: {
         // Hacky workaround for bug in JQuery UI Tabs _isLocal method
         // Source: http://stackoverflow.com/questions/13837304/jquery-ui-non-ajax-tab-loading-whole-website-into-itself
-        create: function(event, ui){
+        create: function(event){
+            var $ = Ember.$;
             var tabsData = $(event.target).data('ui-tabs');
             tabsData.anchors.each(function(idx, anchor){
                 var contentId = $(anchor).attr('href');
@@ -17,7 +18,7 @@ export default Ember.Component.extend(jquiWidget, {
                 $panel.html($(contentId).remove().html());
             });
         },
-        beforeLoad: function(event, ui){
+        beforeLoad: function(event){
             event.preventDefault();
         }
     }
