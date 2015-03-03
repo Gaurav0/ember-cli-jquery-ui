@@ -58,7 +58,7 @@ The list of available standard themes (with JQuery UI 1.11.1):
 
 ## Included Components
 
-At the moment, ember-cli-jquery-ui includes eight of the eleven jquery ui widgets wrapped in components:
+At the moment, ember-cli-jquery-ui includes nine of the eleven jquery ui widgets wrapped in components:
 
 1. `jqui-accordion`, which can be used in your application like this:
 
@@ -89,20 +89,36 @@ At the moment, ember-cli-jquery-ui includes eight of the eleven jquery ui widget
 4. `jqui-datepicker`, which can be used in your application like this:
 
         {{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}
+        
+5. `jqui-menu`, which can be used in your application like this:
 
-5. `jqui-progress-bar`, which can be used in your application like this:
+        {{#jqui-menu}}
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3
+                <ul>
+                    <li>Item 3-1</li>
+                    <li>Item 3-2</li>
+                </ul>
+            </li>
+            <li>Item 4</li>
+            <li>-</li> {{!-- divider --}}
+            <li>Item 5</li>
+        {{/jqui-menu}}
+
+6. `jqui-progress-bar`, which can be used in your application like this:
 
         {{jqui-progress-bar value=37 max=100}}
 
-6. `jqui-slider`, which can be used in your application like this:
+7. `jqui-slider`, which can be used in your application like this:
 
         {{jqui-slider value=num min=0 max=100 step=10 slide="slideAction"}} {{num}}
 
-7. `jqui-spinner`, which can be used in your application like this:
+8. `jqui-spinner`, which can be used in your application like this:
 
         {{jqui-spinner value=num min=100 max=2000 step=100}} {{num}}
         
-8. `jqui-tabs`, which can be used in your application like this:
+9. `jqui-tabs`, which can be used in your application like this:
 
         {{#jqui-tabs}}
             <ul>
