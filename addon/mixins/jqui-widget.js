@@ -17,10 +17,11 @@ export default Ember.Mixin.create({
             _this._gatherEvents(options);
 
             // Workaround for bug in jQuery UI datepicker
+            // $.ui.datepicker is not a function
             var ui;
             var uiType = _this.get('uiType');
-            if ((typeof Ember.$.ui[uiType] !== "function") && uiType === "datepicker") {
-                _this.$().datepicker();
+            if (uiType === "datepicker") {
+                _this.$().datepicker(options);
                 ui = _this.$(uiType)['widget'];
             } else {
 
