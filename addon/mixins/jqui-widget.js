@@ -16,9 +16,18 @@ export default Ember.Mixin.create({
             // Make sure that jQuery UI events trigger methods on this view.
             _this._gatherEvents(options);
 
-            // Create a new instance of the jQuery UI widget based on its `uiType`
-            // and the current element.
-            var ui = Ember.$.ui[_this.get('uiType')](options, _this.get('element'));
+            // Workaround for bug in jQuery UI datepicker
+            var ui;
+            var uiType = _this.get('uiType');
+            if ((typeof Ember.$.ui[uiType] !== "function") && uiType === "datepicker") {
+                _this.$().datepicker();
+                ui = _this.$(uiType)['widget'];
+            } else {
+
+                // Create a new instance of the jQuery UI widget based on its `uiType`
+                // and the current element.
+                ui = Ember.$.ui[_this.get('uiType')](options, _this.get('element'));
+            }
 
             // Save off the instance of the jQuery UI widget as the `ui` property
             // on this Ember view.
