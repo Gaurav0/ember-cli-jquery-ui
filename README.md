@@ -27,7 +27,7 @@ you may do so by editing your Brocfile.js like this:
             'theme': 'ui-darkness'
         }
     });
- 
+
 The list of available standard themes (with JQuery UI 1.11.1):
 
 * base
@@ -55,6 +55,9 @@ The list of available standard themes (with JQuery UI 1.11.1):
 * ui-darkness
 * ui-lightness
 * vader
+
+If you'd prefer not to include any of the above jquery-ui themes, you can set
+the theme to 'none'.
 
 ## Included Components
 
