@@ -12,8 +12,7 @@ http://ember-cli-jquery-ui-example.herokuapp.com/
 
 ## Installation
 
-* `npm install --save-dev ember-cli-jquery-ui`
-* `ember g ember-cli-jquery-ui`
+* `ember install:addon ember-cli-jquery-ui`
 
 ## Change your jquery-ui theme
 
