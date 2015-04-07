@@ -57,7 +57,7 @@ The list of available standard themes (with JQuery UI 1.11.1):
 * vader
 
 If you'd prefer not to include any of the above jquery-ui themes, you can set
-the theme to 'none'.
+the theme to 'none'. *Warning:* Components do not work correctly without styling.
 
 ## Included Components
 
