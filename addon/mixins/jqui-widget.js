@@ -6,7 +6,7 @@ export default Ember.Mixin.create({
 
     // When Ember creates the view's DOM element, it will call this
     // method.
-    setup: function() {
+    setup: Ember.on('didInsertElement', function() {
         var _this = this;
         Ember.run.scheduleOnce('afterRender', function() {
 
@@ -35,11 +35,11 @@ export default Ember.Mixin.create({
             _this.set('ui', ui);
 
         });
-    }.on('didInsertElement'),
+    }),
 
     // When Ember tears down the view's DOM element, it will call
     // this method.
-    tearDown: function() {
+    tearDown: Ember.on('willDestroyElement', function() {
         var ui = this.get('ui');
 
         if (ui) {
@@ -53,7 +53,7 @@ export default Ember.Mixin.create({
             }
             ui._destroy();
         }
-    }.on('willDestroyElement'),
+    }),
 
     // Each jQuery UI widget has a series of options that can be configured.
     // For instance, to disable a button, you call
