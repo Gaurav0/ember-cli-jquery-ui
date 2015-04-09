@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import $ from 'jquery';
 
 // Create a new mixin for jQuery UI widgets using the Ember
 // mixin syntax.
@@ -21,7 +22,11 @@ export default Ember.Mixin.create({
             var ui;
             var uiType = _this.get('uiType');
             if (uiType === "datepicker") {
-                _this.$().datepicker(options);
+                _this.$().datepicker(
+                  $.extend(options, {
+                    onSelect: function() { _this.$().change(); }
+                  })
+                );
                 ui = _this.$(uiType)['widget'];
             } else {
 
