@@ -2,6 +2,10 @@
 
 A simple addon to add jquery-ui as a dependency to your app. Also includes a small library of components wrapping JQuery UI widgets.
 
+[![Build Status](https://travis-ci.org/Gaurav0/ember-cli-jquery-ui.svg?branch=master)](https://travis-ci.org/Gaurav0/ember-cli-jquery-ui)
+
+[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-jquery-ui.svg)](http://emberobserver.com/addons/ember-cli-jquery-ui)
+
 ## Example Application
 
 An example application demonstrating how to use ember-cli-jquery-ui is available at
@@ -12,7 +16,7 @@ http://ember-cli-jquery-ui-example.herokuapp.com/
 
 ## Installation
 
-* `ember install:addon ember-cli-jquery-ui`
+* `ember install ember-cli-jquery-ui`
 
 ## Change your jquery-ui theme
 
