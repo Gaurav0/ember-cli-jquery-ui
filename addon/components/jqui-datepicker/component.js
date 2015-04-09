@@ -14,6 +14,5 @@ export default Ember.TextField.extend(jquiWidget, {
     "selectOtherMonths", "shortYearCutoff", "showAnim", "showButtonPanel",
     "showCurrentAtPos", "showMonthAfterYear", "showOn", "showOptions",
     "showOtherMonths", "showWeek", "stepMonths", "weekHeader", "yearRange",
-    "yearSuffix"],
-  uiEvents: ['onChangeMonthYear', 'onClose', 'onSelect']
+    "yearSuffix"]
 });
