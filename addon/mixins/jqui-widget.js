@@ -31,6 +31,9 @@ export default Ember.Mixin.create({
                 ui = {
                     option: function(key, value) {
                         _this.$().datepicker('option', key, value);
+                    },
+                    _destroy: function() {
+                        _this.$().datepicker('destroy');
                     }
                 };
             } else {
