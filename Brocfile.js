@@ -18,6 +18,8 @@ var app = new EmberAddon();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('bower_components/jquery-ui/jquery-ui.js');
+if (!process.env.EMBER_CLI_FASTBOOT) {
+  app.import('bower_components/jquery-ui/jquery-ui.js');
+}
 
 module.exports = app.toTree();

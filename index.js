@@ -12,7 +12,11 @@ module.exports = {
   },
 
   included: function(app) {
-    this._super.included(app);
+    this._super.included.apply(this, arguments);
+
+   if (process.env.EMBER_CLI_FASTBOOT) {
+     return;
+   }
 
     var options = app.options['ember-cli-jquery-ui'] || {};
     var theme = options.theme || "base";
