@@ -1,5 +1,7 @@
 # Ember-cli-jquery-ui
 
+**This package is deprecated. I no longer recommend using JQuery plugins in Ember.js generally.** 
+
 [![Join the chat at https://gitter.im/Gaurav0/ember-cli-jquery-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Gaurav0/ember-cli-jquery-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 A simple addon to add jquery-ui as a dependency to your app. Also includes a small library of components wrapping JQuery UI widgets.
