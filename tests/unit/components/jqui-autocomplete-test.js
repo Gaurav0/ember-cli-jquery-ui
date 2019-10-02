@@ -1,21 +1,18 @@
-import {
-  moduleForComponent,
-  test
-} from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 
-moduleForComponent('jqui-autocomplete', 'JquiAutocompleteComponent', {
-  // specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
-});
+module('JquiAutocompleteComponent', function(hooks) {
+  setupTest(hooks);
 
-test('it renders', function(assert) {
-  assert.expect(2);
+  test('it renders', function(assert) {
+    assert.expect(2);
 
-  // creates the component instance
-  var component = this.subject();
-  assert.equal(component._state, 'preRender');
+    // creates the component instance
+    var component = this.owner.factoryFor('component:jqui-autocomplete').create();
+    assert.equal(component._state, 'preRender');
 
-  // appends the component to the page
-  this.render();
-  assert.equal(component._state, 'inDOM');
+    // appends the component to the page
+    this.render();
+    assert.equal(component._state, 'inDOM');
+  });
 });
